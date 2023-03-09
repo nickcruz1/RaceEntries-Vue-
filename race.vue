@@ -34,3 +34,29 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+#app {
+  text-align: center;
+  color: #2c3e50;
+  margin: 1rem;
+}
+  
+  h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  button {
+    background-color: lightgreen;
+    color: black;
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: red;
+  }
+</style>
