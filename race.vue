@@ -12,3 +12,25 @@
     
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Race Widget',
+      entries:
+        [
+          {ID: 1, name: 'John'}, {ID: 2, name: 'Tyler'}, {ID: 3, name: 'Nick'}, {ID: 4, name: 'Billy'}
+        ],
+      
+    };
+  },
+  methods: {
+    recordEntries() {
+      let output = document.querySelector(".output");
+      
+      output.innerHTML = `<h2> The list of entrants are: ${this.entries}`;
+    }
+  }
+};
+</script>
