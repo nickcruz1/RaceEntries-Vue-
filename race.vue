@@ -139,4 +139,19 @@ export default {
     background-color: white;
     color: red;
   }
+  
+  
+}
+
+@media screen and (max-width: 750px) {
+  .entryContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .entryContainer {
+    width: 80%;
+  }
+}
 </style>
