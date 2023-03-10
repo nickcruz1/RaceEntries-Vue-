@@ -32,6 +32,8 @@
       <h2 class="entryH2">List of Entrants: {{ newEntrant }}</h2>
 
       <div class="output"></div>
+      
+         <p>Number Of Entrants: {{this.entries.length}}</p>
     
   </div>
 </template>
