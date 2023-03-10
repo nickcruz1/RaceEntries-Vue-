@@ -65,6 +65,11 @@ export default {
     return {
       message: 'Race Widget',
       entries:
+        title: "Entry List",
+      newEntrant: "",
+      editModalID: "",
+      editModalname: "",
+      editModalspecialty: "",
         [
           {ID: 1, name: 'John'}, {ID: 2, name: 'Tyler'}, {ID: 3, name: 'Nick'}, {ID: 4, name: 'Billy'}
         ],
