@@ -2,8 +2,19 @@
   <div id="app">
     <h1>{{message}}</h1>
   
-    <div v-for="entry in entries">
-      <h2>Marathon List:<br>{{ entry.ID }} {{ entry.name }}</h2>
+    <!-- Edit Me Modal -->
+    <div class="editMeModal">
+      
+      <h2 class="editModalH2"> Edit Modal </h2>
+      <label for="editModalID">Edit ID</label>
+      <input class="editModalID" type="number">
+      <label for="editModalName">Edit Name</label>
+      <input class="editModalName" type="text">
+      <label for="editModalSpecialty">Edit Specialty</label>
+      <input class="editModalSpecialty" type="text">
+      
+      <button class="editMeModalBtn" @click="editMeModal">Edit Me Modal</button>
+      
     </div>
     
     <button @click="recordEntries">Click For Race Entries</button>
