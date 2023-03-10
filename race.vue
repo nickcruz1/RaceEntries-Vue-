@@ -85,14 +85,34 @@ export default {
       ]
     };
   },
-  methods: {
+ methods: {
     recordEntries() {
+      let entryValue = document.querySelector(".entryValue");
       let output = document.querySelector(".output");
+
+      output.innerHTML = `<h2> Entrant Added: ${entryValue.value}`;
+    },
+    deleteMe() {
+      let entrantList = document.querySelector(".entrantList");
+      let entries = this.entries;
+
+      entries.pop();
+      // entrantList.remove();
+    },
+    editMe() {
+      let editModal = document.querySelector(".editMeModal");
+
+      editModal.style.display = "block";
+    },
+    editMeModal() {
+      let editMeModal = document.querySelector(".editMeModal")
+      alert("Modal Edited")
       
-      output.innerHTML = `<h2> The list of entrants are: ${this.entries}`;
+      editMeModal.style.display = "none";
     }
   }
 };
+</script>
 </script>
 
 <style lang="scss">
