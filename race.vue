@@ -25,6 +25,14 @@
     
     <div class="output"></div>
     
+     <label for="enterEntrant">Enter Entrant Below:</label>
+      <input v-model="newEntrant" class="entryValue" type="text" />
+      <button @click="recordEntries">Click For Race Entries</button>
+
+      <h2 class="entryH2">List of Entrants: {{ newEntrant }}</h2>
+
+      <div class="output"></div>
+    
   </div>
 </template>
 
