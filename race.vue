@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <h1>{{message}}</h1>
-  
+    <h1>{{ message }}</h1>
+    
+    
     <!-- Edit Me Modal -->
     <div class="editMeModal">
       
@@ -17,15 +18,13 @@
       
     </div>
     
-     <div class="entryContainer">
+    
+
+    <div class="entryContainer">
       <!-- Create new value using v-model? and add new entry -->
       <h2>{{ title }}</h2>
-    
-    <button @click="recordEntries">Click For Race Entries</button>
-    
-    <div class="output"></div>
-    
-     <label for="enterEntrant">Enter Entrant Below:</label>
+
+      <label for="enterEntrant">Enter Entrant Below:</label>
       <input v-model="newEntrant" class="entryValue" type="text" />
       <button @click="recordEntries">Click For Race Entries</button>
 
@@ -33,8 +32,9 @@
 
       <div class="output"></div>
       
-         <p>Number Of Entrants: {{this.entries.length}}</p>
- <!-- Contains list of Entrants -->
+      <p>Number Of Entrants: {{this.entries.length}}</p>
+
+      <!-- Contains list of Entrants -->
       <div class="entrantList" v-for="entry in entries">
         <h2>
           Entrant ID: {{ entry.ID }}
@@ -58,26 +58,17 @@
   </div>
 </template>
 
-
 <script>
 export default {
   data() {
     return {
-      message: 'Race Widget',
-      entries:
-        title: "Entry List",
+      message: "Race Widget",
+      title: "Entry List",
       newEntrant: "",
       editModalID: "",
       editModalname: "",
       editModalspecialty: "",
-        [
-          {ID: 1, name: 'John'}, {ID: 2, name: 'Tyler'}, {ID: 3, name: 'Nick'}, {ID: 4, name: 'Billy'}
-        ],
-      
-    };
-    
-  },
-   entries: [
+      entries: [
         { ID: 1, name: "John", specialty: "5k" },
         { ID: 2, name: "Tyler", specialty: "10k" },
         { ID: 3, name: "Nick", specialty: "50k" },
@@ -85,7 +76,7 @@ export default {
       ]
     };
   },
- methods: {
+  methods: {
     recordEntries() {
       let entryValue = document.querySelector(".entryValue");
       let output = document.querySelector(".output");
@@ -113,7 +104,6 @@ export default {
   }
 };
 </script>
-</script>
 
 <style lang="scss">
 #app {
@@ -121,26 +111,115 @@ export default {
   color: #2c3e50;
   margin: 1rem;
 }
-  
-  h1 {
-    font-size: 1.5rem;
-    padding: 1rem;
+
+.entryH2 {
+  margin: 1rem;
+}
+
+.entryContainer {
+  background-color: lightgray;
+  border: 3px solid black;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  width: 60%;
+  max-width: 1000px;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+
+  input[type="text"] {
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
+
+  .entrantList {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid blue;
+    padding: 0.5rem;
+    width: 80%;
+  }
+
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .editMeBtn {
+    @extend .deleteMeBtn;
+    background-color: darkblue !important;
+  }
+
+  .deleteMeBtn {
+    background-color: red;
+    color: white;
+    width: 70px;
   }
 
   button {
-    background-color: lightgreen;
-    color: black;
-    border-radius: 20px;
-    padding: 0.5rem;
+    width: 50%;
+    margin: 1.5rem auto auto auto;
   }
+}
   
-  button:hover {
-    cursor: pointer;
-    background-color: white;
-    color: red;
+   .editMeModal {
+     .editModalH2 {
+       text-align: center;
+       margin-bottom: 0.5rem;
+     }
+     
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid white;
+     border-radius: 20px;
+     color: white;
+    padding: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+     
+     .editMeModalBtn {
+       margin-top: 1rem;
+     }
+}
+  
+  
+
+h1 {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+button {
+  background-color: lightgreen;
+  color: black;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: red;
+}
+
+// Media Queries Section //
+
+@media screen and (min-width: 1000px) {
+  .entryContainer {
+    width: 60%;
   }
-  
-  
 }
 
 @media screen and (max-width: 750px) {
