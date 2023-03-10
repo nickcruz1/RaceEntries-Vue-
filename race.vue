@@ -34,9 +34,30 @@
       <div class="output"></div>
       
          <p>Number Of Entrants: {{this.entries.length}}</p>
-    
+ <!-- Contains list of Entrants -->
+      <div class="entrantList" v-for="entry in entries">
+        <h2>
+          Entrant ID: {{ entry.ID }}
+          <br />
+          Name: {{ entry.name }}
+          <br />
+          Speciality: {{ entry.specialty }}
+
+          <div class="btnContainer">
+            <button class="editMeBtn" @click="editMe">Edit Btn</button>
+            <button class="deleteMeBtn" @click="deleteMe">Delete -</button>
+          </div>
+        </h2>
+      </div>
+      
+
+ 
+      
+      
+    </div>
   </div>
 </template>
+
 
 <script>
 export default {
