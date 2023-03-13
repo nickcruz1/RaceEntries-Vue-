@@ -24,6 +24,7 @@
       <!-- Create new value using v-model? and add new entry -->
       <h2>{{ title }}</h2>
       
+        <!-- Add New Entrant ID -->
        <label for="newEntrantID">Enter New Entrant ID Below:</label>
  <input
         id="newEntrantID"
