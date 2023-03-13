@@ -43,6 +43,12 @@
       />
        <!-- Add New Entrant Specialty -->
         <label for="enterEntrant">Enter Entrant Specialty Below:</label>
+         <input
+        id="newEntrantSpecialty"
+        v-model="newEntrantSpecialty"
+        class="entryValue"
+        type="text"
+      />
    
       <input v-model="newEntrant" class="entryValue" type="text" />
       <button @click="recordEntries">Click For Race Entries</button>
