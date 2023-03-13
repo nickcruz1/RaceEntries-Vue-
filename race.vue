@@ -23,8 +23,10 @@
     <div class="entryContainer">
       <!-- Create new value using v-model? and add new entry -->
       <h2>{{ title }}</h2>
+      
+       <label for="newEntrantID">Enter New Entrant ID Below:</label>
 
-      <label for="enterEntrant">Enter Entrant Below:</label>
+   
       <input v-model="newEntrant" class="entryValue" type="text" />
       <button @click="recordEntries">Click For Race Entries</button>
 
