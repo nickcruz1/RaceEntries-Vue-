@@ -35,6 +35,12 @@
       
        <!-- Add New Entrant Name -->
       <label for="newEntrantName">Enter New Entrant Name Below:</label>
+        <input
+        id="newEntrantName"
+        v-model="newEntrantName"
+        class="entryValue"
+        type="text"
+      />
    
       <input v-model="newEntrant" class="entryValue" type="text" />
       <button @click="recordEntries">Click For Race Entries</button>
