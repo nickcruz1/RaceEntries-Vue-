@@ -25,7 +25,12 @@
       <h2>{{ title }}</h2>
       
        <label for="newEntrantID">Enter New Entrant ID Below:</label>
-
+ <input
+        id="newEntrantID"
+        v-model="newEntrantID"
+        class="entryValue"
+        type="number"
+      />
    
       <input v-model="newEntrant" class="entryValue" type="text" />
       <button @click="recordEntries">Click For Race Entries</button>
