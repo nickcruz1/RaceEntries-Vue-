@@ -112,8 +112,14 @@ export default {
   },
   methods: {
     recordEntries() {
-      let entryValue = document.querySelector(".entryValue");
-      let output = document.querySelector(".output");
+       let output = document.querySelector(".output");
+      let entryValues = document.querySelectorAll(".entryValue");
+      let entrantList = document.querySelector(".entrantList");
+      let entries = this.entries;
+      let newID = document.querySelector("#newEntrantID");
+      let newName = document.querySelector("#newEntrantName");
+      let newSpecialty = document.querySelector("#newEntrantSpecialty");
+      let newEntryValue = document.querySelectorAll(".entryValue");
 
       output.innerHTML = `<h2> Entrant Added: ${entryValue.value}`;
     },
