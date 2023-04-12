@@ -57,7 +57,10 @@
 
       <div class="output"></div>
       
-      <p>Number Of Entrants: {{this.entries.length}}</p>
+      <!-- Displays entries length using v-if and v-else below -->
+      <div v-if="this.entries.length == 0">
+        {{ this.entries.length }} Entries Left :(
+      </div>
 
       <!-- Contains list of Entrants -->
       <div class="entrantList" v-for="entry in entries">
