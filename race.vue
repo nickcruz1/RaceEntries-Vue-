@@ -142,8 +142,7 @@ export default {
       let entrantList = document.querySelector(".entrantList");
       let entries = this.entries;
 
-      entries.pop();
-      // entrantList.remove();
+      entries.shift();
     },
     editMe() {
       let editModal = document.querySelector(".editMeModal");
