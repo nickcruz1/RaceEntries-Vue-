@@ -105,7 +105,8 @@ export default {
         { ID: 1, name: "John", specialty: "5k" },
         { ID: 2, name: "Tyler", specialty: "10k" },
         { ID: 3, name: "Nick", specialty: "50k" },
-        { ID: 4, name: "Billy", specialty: "Marathon" }
+        { ID: 4, name: "Billy", specialty: "Marathon" },
+         { ID: 5, name: "Sam", specialty: "100m Dash" }
       ]
     };
   },
