@@ -245,6 +245,7 @@ export default {
   
 
 h1 {
+  color: rgb(255, 255, 255, 0.8);
   font-size: 1.5rem;
   padding: 1rem;
 }
