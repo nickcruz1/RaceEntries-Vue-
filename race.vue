@@ -160,6 +160,12 @@ export default {
 </script>
 
 <style lang="scss">
+$lightC: rgb(0, 0, 0, 0.4);
+
+body {
+  background-color: $lightC;
+}
+
 #app {
   text-align: center;
   color: #2c3e50;
