@@ -121,7 +121,22 @@ export default {
       let newSpecialty = document.querySelector("#newEntrantSpecialty");
       let newEntryValue = document.querySelectorAll(".entryValue");
 
-      output.innerHTML = `<h2> Entrant Added: ${entryValue.value}`;
+     
+      let theO = `Entrant ID: ${newID.value} 
+          <br />
+          Name: ${newName.value}
+          <br />
+          Specialty:  ${newSpecialty.value}`;
+
+      if (newName.value == "" || newSpecialty.value == "" || newID.value == 0) {
+        alert("Not cool");
+      } else {
+        console.log("Entry Added");
+        // entries.unshift(theO);
+        // newID.innerHTML == "";
+        // newName.value == "";
+        // newSpecialty.value == "";
+      }
     },
     deleteMe() {
       let entrantList = document.querySelector(".entrantList");
