@@ -1,3 +1,5 @@
+<!-- Continue adding features to this app -->
+
 <template>
   <div id="app">
     <h1>{{ message }}</h1>
