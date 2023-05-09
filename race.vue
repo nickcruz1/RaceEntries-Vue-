@@ -1,4 +1,8 @@
 <!-- Continue adding features to this app -->
+<!-- List of New Features: 
+
+
+-->
 
 <template>
   <div id="app">
